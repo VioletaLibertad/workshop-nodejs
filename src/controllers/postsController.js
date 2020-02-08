@@ -16,9 +16,9 @@ const find = async (req, res) => {
 };
 
 const create = (req, res) => {
-  const { titulo, contenido } = req.body;
+  const { title, content } = req.body;
 
-  return postService.create(titulo, contenido)
+  return postService.create(title, content)
     .then((result) => {
       console.log(result);
       return res.status(200).send({ message: 'Post creado exitosamente' });
@@ -31,9 +31,9 @@ const create = (req, res) => {
 
 const update = (req, res) => {
   const { id } = req.params;
-  const { titulo, contenido } = req.body;
+  const { title, content } = req.body;
 
-  return postService.update(id, titulo, contenido)
+  return postService.update(id, title, content)
     .then((result) => {
       console.log(result);
       return res.status(200).send({ message: 'Post actualizado exitosamente' });

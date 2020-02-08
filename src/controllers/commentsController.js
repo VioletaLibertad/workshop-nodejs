@@ -16,9 +16,9 @@ const find = async (req, res) => {
 };
 
 const create = (req, res) => {
-  const { contenido, postId } = req.body;
+  const { content, postId } = req.body;
 
-  return commentService.create(postId, contenido)
+  return commentService.create(postId, content)
     .then((result) => {
       console.log(result);
       return res.status(200).send({ message: 'Comentario creado exitosamente!' });
@@ -31,9 +31,9 @@ const create = (req, res) => {
 
 const update = (req, res) => {
   const { id } = req.params;
-  const { contenido } = req.body;
+  const { content } = req.body;
 
-  return commentService.update(id, contenido)
+  return commentService.update(id, content)
     .then((result) => {
       console.log(result);
       return res.status(200).send({ message: 'Comentario actualizado exitosamente' });
