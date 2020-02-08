@@ -1,3 +1,5 @@
+import { postService } from '../services';
+
 const list = async (req, res) => {
   const posts = await postService.list();
   return res.json(posts);
