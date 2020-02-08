@@ -5,8 +5,8 @@ const route = express.Router();
 
 route.get('/', commentsController.list);
 route.get('/:id', commentsController.find);
-route.get('/', commentsController.create);
-route.get('/:id', commentsController.update);
-route.get('/:id', commentsController.del);
+route.post('/', commentsController.create);
+route.put('/:id', commentsController.update);
+route.delete('/:id', commentsController.del);
 
 export default route;
