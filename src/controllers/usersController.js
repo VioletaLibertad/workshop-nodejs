@@ -1,3 +1,5 @@
+import { userService } from '../services';
+
 const list = async (req, res) => {
   const users = await userService.list();
   return res.json(users);
@@ -11,7 +13,7 @@ const find = async (req, res) => {
   } catch (err) {
     return res.status(500).send({ message: 'Error al encontrar el usuario' });
   }
-}
+};
 
 const create = (req, res) => {
   const { name, email } = req.body;

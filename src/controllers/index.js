@@ -5,5 +5,5 @@ import commentsController from './commentsController';
 export {
   usersController,
   postsController,
-  commentsController
+  commentsController,
 };
